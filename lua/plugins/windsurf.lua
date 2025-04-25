@@ -1,11 +1,8 @@
 return {
-    "Extrafunction/windsurf.nvim",
+    "Exafunction/windsurf.nvim",
     dependencies = {
         "nvim-lua/plenary.nvim",
     },
-    -- Unmerged PR fixing virtual_text
-    url = "https://github.com/pillzu/windsurf.nvim.git",
-    branch = "pillzu/issue-298-fix-virtual-text-error",
     config = function()
         require("codeium").setup({
             -- Optionally disable cmp source if using virtual text only

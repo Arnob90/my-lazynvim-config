@@ -8,9 +8,10 @@ vim.opt.expandtab = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 if vim.g.neovide then
-  vim.g.neovide_scale_factor = 0.7
-  vim.g.ai_cmp = false
+    vim.g.neovide_scale_factor = 0.7
+    vim.g.ai_cmp = false
 end
 vim.lsp.config("rust_analyzer", {
-  settings = {},
+    settings = {},
 })
+vim.g.snacks_animate = false

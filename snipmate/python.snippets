@@ -1,0 +1,23 @@
+# snippet <trigger> <desc>
+snippet mforr python for loop
+    for ${2:elem} in ${1:container}:
+        ${0}
+
+snippet mfor python range for 
+    for ${1:i} in range(${2:start}, ${3:end}, ${4:step}):
+        ${0}
+snippet mif python if
+    if ${1:condition}:
+        ${0}
+
+snippet mclass python class def
+	class ${1:ClassName}:
+		def __init__(self${2:}):
+			${0}
+			
+
+snippet mexcept python exception class def
+	class ${1:ExceptionName}(Exception):
+		def __init__(self,msg="${2:Exception Message}"):
+			super().__init__(msg)
+			${0}

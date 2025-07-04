@@ -47,4 +47,5 @@ return {
             },
         })
     end,
+    enabled = true,
 }

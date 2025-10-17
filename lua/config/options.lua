@@ -8,10 +8,31 @@ vim.opt.expandtab = false
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 if vim.g.neovide then
-    vim.g.neovide_scale_factor = 0.7
+    -- vim.g.neovide_scale_factor = 0.7
     vim.g.ai_cmp = false
 end
-vim.lsp.config("rust_analyzer", {
-    settings = {},
-})
 vim.g.snacks_animate = false
+-- vim.g.rustaceanvim = {
+--     server = {
+--         cmd = { "/home/arnob/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
+--         -- default_settings = {
+--         --     ["rust-analyzer"] = {
+--         --         -- checkOnSave = {
+--         --         --     enable = false,
+--         --         -- },
+--         --         cargo = {
+--         --             targetDir = "target/analyzer",
+--         --             buildScripts = {
+--         --                 enable = true,
+--         --             },
+--         --         },
+--         --         procMacro = {
+--         --             enable = true,
+--         --         },
+--         --         extraEnv = {
+--         --             MACOSX_DEPLOYMENT_TARGET = "10.13",
+--         --         },
+--         --     },
+--         -- },
+--     },
+-- }

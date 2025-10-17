@@ -6,4 +6,25 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- Save on text change, after a short delay (e.g., 500ms)
 --
+-- TODO: This is too slow, so we disable it for now
+-- vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
+--     group = vim.api.nvim_create_augroup("AutoSave", { clear = true }),
+--     pattern = "*.rs", -- Only for rust files
+--     callback = function()
+--         local to_schedule = function()
+--             local buffers = vim.api.nvim_list_bufs()
+--             for _, buf in pairs(buffers) do
+--                 vim.api.nvim_buf_call(buf, function()
+--                     if vim.bo.filetype == "rust" then
+--                         vim.b.autoformat = false
+--                         vim.cmd("w")
+--                         vim.b.autoformat = true
+--                     end
+--                 end)
+--             end
+--         end
+--         vim.defer_fn(to_schedule, 500)
+--     end,
+-- })

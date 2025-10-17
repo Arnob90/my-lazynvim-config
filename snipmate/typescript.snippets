@@ -1,0 +1,10 @@
+snippet merrBackend typescript server error handling
+	if (!${1:res}.ok) {
+		const err = await fastapiError.parseAsync(${1:res}.json())
+		return err
+	}
+snippet merrsyncbackend typescript server error handling but syncronous
+	if (!${1:res}.ok) {
+		const err = fastapiError.parse(${1:res}.json())
+		return err
+	}

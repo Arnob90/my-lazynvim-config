@@ -48,4 +48,19 @@ return {
         })
     end,
     enabled = true,
+    lazy = true,
+    ft = {
+        "python",
+        "lua",
+        "javascript",
+        "typescript",
+        "html",
+        "css",
+        "go",
+        "c",
+        "cpp",
+        "javascriptreact",
+        "typescriptreact",
+        "rust",
+    },
 }
